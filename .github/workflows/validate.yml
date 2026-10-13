@@ -1,0 +1,26 @@
+name: Validate companion
+on:
+  push:
+    branches: ['**']
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  amd64:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - run: python3 scripts/verify_release.py
+      - run: python3 -m unittest discover -s tests -v
+      - name: Build from pinned public base
+        run: docker build --platform linux/amd64 -t echomuse-household-test ./echomuse_household_voice
+      - name: Full image synthetic acceptance with no external network
+        run: >-
+          docker run --rm --network none --user 65532:65532 --cap-drop ALL
+          --security-opt no-new-privileges --read-only --tmpfs /tmp:rw,mode=1777,size=256m
+          --memory 1g --cpus 2 -e PYTHONPATH=/app -e PYTHONDONTWRITEBYTECODE=1
+          -v "$PWD/tests/image_smoke.py:/smoke/image_smoke.py:ro"
+          --entrypoint python echomuse-household-test /smoke/image_smoke.py

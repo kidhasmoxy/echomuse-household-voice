@@ -1,0 +1,15 @@
+{
+  "architecture": "amd64",
+  "base_image": "ghcr.io/wilbowes/echomuse-controller@sha256:4f21aec35044644d9cec0ed15f941904f6232478d69665b8871031a9b97a6056",
+  "commit": "e119433c0845dfe80f4b1ec44c9e8e8028adbb07",
+  "patched_input_sha256": {
+    "em_api.py": "4d0c42dfdd9b7ce12c79751adc7c48a4a90a0588746c8e3114223939d8f49bc7",
+    "em_controller.py": "ff1b3e78436c77d9a1de607faf8e1cdad31ef6fc077c8d408b521aa594b6dd19",
+    "em_esphome.py": "a3b407fb08345fdeb45410d05fdd338ec795aa409225fc6eb40ba1071b9f3e01",
+    "em_household_audio.py": "839a5f5f7f99d862ec0f7009e4fc703ae5a6f15110de8e0ada2b05460523e2c6"
+  },
+  "repository": "https://github.com/wilbowes/EchoMuse",
+  "tag": "controller-v2.26.0",
+  "upstream_config_sha256": "73ebcca889a573218bf7ac97a259d8deb6cc4a4165bc0bcc4fb84e8e50911150",
+  "upstream_license_sha256": "ca863464fc4f2a949ac0107c782c0496a0e10a51dd2982167bee2789b8d3f3cc"
+}

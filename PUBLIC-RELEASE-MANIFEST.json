@@ -1,0 +1,46 @@
+{
+  "architecture": "amd64",
+  "base_image": "ghcr.io/wilbowes/echomuse-controller@sha256:4f21aec35044644d9cec0ed15f941904f6232478d69665b8871031a9b97a6056",
+  "files": {
+    ".gitattributes": "636bf20a6f81e4b825dc39de410c32f341ff4ac464756e37abe9caa7bdcf678d",
+    ".github/workflows/release.yml": "58be5101f3aac1595d3136062592f69997881a60c2428d9f3ad0c7294585f88c",
+    ".github/workflows/validate.yml": "e2eb07abb48444e1440084bb3d8a00192318712920e5c1cde473077620938a4c",
+    ".gitignore": "d114c19b5318bcecc8e449dabae5a48f405d5b1c0960fbf35c8379f23e0fb267",
+    "LICENSE": "ca863464fc4f2a949ac0107c782c0496a0e10a51dd2982167bee2789b8d3f3cc",
+    "NOTICE.md": "281cd0a3bb98f48145bea9e46426fa1df97040a44922edf3148b09b41092cc6f",
+    "README.md": "91024c0340aa77c02a2155d43525aebbb0239a54b93bc9281120a654f8475eb5",
+    "SECURITY.md": "42d15a1cd4019f4b24d3ffcd7d61c89f8503deaf79b8af82794d5e77bb5cdd90",
+    "echomuse_household_voice/CHANGELOG.md": "f9c4ad3f2726aba753958579052ee4a1109da8f1ed70cae22f02bdccee488964",
+    "echomuse_household_voice/DOCS.md": "3e82bff29c33f1ca1180e813082766ff75a249e09e4e6a7596ec8609b8c6a714",
+    "echomuse_household_voice/Dockerfile": "0c0425a636687afe49ae54d390ac3d6ca2e78deac9eaef2e4abbaa99d8ae81fa",
+    "echomuse_household_voice/LICENSE": "ca863464fc4f2a949ac0107c782c0496a0e10a51dd2982167bee2789b8d3f3cc",
+    "echomuse_household_voice/config.json": "5aea7a73ee9fcbdfbe58778c240c7e855062dc86b8b357ce525c3821e3d5cbf3",
+    "echomuse_household_voice/src/em_api.py": "8fd4c8c5a59c1f30fe212faf61f664605beaf923826db8e7374f93426059c8eb",
+    "echomuse_household_voice/src/em_controller.py": "88ed286f1c0d95e05b8ab1ea07b6d6fc297ef6f231eb99fa7b2ca3a33d6d90fb",
+    "echomuse_household_voice/src/em_esphome.py": "5a1627e1e372ff8c3427d6ef2aded888b0cee692fae11cc566aa950ffc0c4094",
+    "echomuse_household_voice/src/em_household_audio.py": "a4a8538b41a893499eef69ad1bb489129036746a4abf425fa702764600c6b588",
+    "repository.yaml": "6b14eafbab1de7cc60d1d945a0d282799f6b5aa0071cff148446382664758d29",
+    "scripts/verify_release.py": "60a5eca336f7a553afaa6acea050a2c3599f3e4b4043b3f83af28653fd5f06df",
+    "tests/image_smoke.py": "782d7829bcd8ebd9ab488e310a807841be95cacfb9a5c55df71f9ffc58416139",
+    "tests/test_release.py": "8c98a48eb0bafa7a153b7506475d66271dda248a45316b48dd6fdb282e23d87a",
+    "upstream-pin.json": "25d7f0cc0904efb9fa89030deb55ba941f90d9228883945495c089ecd5a99a70"
+  },
+  "format": 1,
+  "image_repository": "ghcr.io/kidhasmoxy/echomuse-household-voice",
+  "installed": false,
+  "limitations": [
+    "Signature scans cannot prove absence of arbitrary secrets.",
+    "Export is not a built-image or physical acceptance test."
+  ],
+  "patch_manifest_sha256": "19ef760e3c629034e2b72480b008e7a036ff4ddc3f522cd8e26cfa0b894853bb",
+  "privacy": {
+    "credential_signatures": "passed",
+    "explicit_allowlist": true,
+    "household_markers": "passed",
+    "runtime_data_history_logs_excluded": true
+  },
+  "published": false,
+  "repository": "https://github.com/kidhasmoxy/echomuse-household-voice",
+  "upstream_commit": "e119433c0845dfe80f4b1ec44c9e8e8028adbb07",
+  "version": "2.26.0-hv.1"
+}
