@@ -1,5 +1,5 @@
 FROM ghcr.io/wilbowes/echomuse-controller@sha256:4f21aec35044644d9cec0ed15f941904f6232478d69665b8871031a9b97a6056
-ARG BUILD_VERSION=2.26.0-hv.1
+ARG BUILD_VERSION=2.26.0-hv.2
 ARG BUILD_ARCH=amd64
 LABEL io.hass.version="${BUILD_VERSION}" io.hass.type="app" io.hass.arch="${BUILD_ARCH}" \
       org.opencontainers.image.source="https://github.com/kidhasmoxy/echomuse-household-voice" \

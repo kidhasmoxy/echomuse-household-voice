@@ -28,7 +28,7 @@ jobs:
         run: >-
           docker run --rm --network none --user 65532:65532 --cap-drop ALL
           --security-opt no-new-privileges --read-only --tmpfs /tmp:rw,mode=1777,size=256m
-          --memory 1g --cpus 2 -e PYTHONPATH=/app -e PYTHONDONTWRITEBYTECODE=1
+          --memory 1g --cpus 2 -e PYTHONPATH=/app -e PYTHONDONTWRITEBYTECODE=1 -e SERVER_IP=192.0.2.1
           -v "$PWD/tests/image_smoke.py:/smoke/image_smoke.py:ro"
           --entrypoint python "$IMAGE:$VERSION" /smoke/image_smoke.py
       - name: Publish using the repository-scoped token

@@ -1,6 +1,6 @@
 {
   "name": "EchoMuse Household Voice",
-  "version": "2.26.0-hv.1",
+  "version": "2.26.0-hv.2",
   "image": "ghcr.io/kidhasmoxy/echomuse-household-voice",
   "slug": "echomuse_household_voice",
   "description": "EchoMuse companion controller with opt-in authenticated Household Voice audio routing.",

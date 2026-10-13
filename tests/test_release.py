@@ -25,6 +25,12 @@ class ReleaseTests(unittest.TestCase):
         self.assertEqual(config['options']['external_audio_devices'],[])
         self.assertEqual(config['schema']['external_audio_devices'][0]['key_hex'],'password')
 
+    def test_offline_smoke_supplies_explicit_synthetic_address(self):
+        for name in ('validate.yml','release.yml'):
+            workflow=(ROOT/'.github/workflows'/name).read_text()
+            self.assertIn('--network none',workflow)
+            self.assertIn('-e SERVER_IP=192.0.2.1',workflow)
+
     def test_minimal_image_overlay(self):
         docker=(ROOT/'echomuse_household_voice/Dockerfile').read_text()
         self.assertEqual(sum(line.startswith('COPY src/') for line in docker.splitlines()),4)
